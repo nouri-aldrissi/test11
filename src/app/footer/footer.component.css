@@ -1,0 +1,49 @@
+/* تخصيص الفوتر */
+.footer {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Noto Sans, "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+   
+    font-size: 1rem;
+    background-color: #2C3E50; /* اللون الموحد للفوتر */
+    color: white; /* تعيين النص داخل الفوتر باللون الأبيض */
+}
+
+/* تخصيص البطاقات داخل الفوتر */
+.footer .card {
+    background-color: #2C3E50; /* تعيين نفس لون الخلفية للبطاقات */
+    color: white; 
+    border: none; 
+}
+
+/* تخصيص النص داخل البطاقة */
+.footer .card-body h3 {
+    font-weight: bold; 
+    color: white;
+}
+
+.footer  p {
+    font-size: 0.9rem;
+    color: white;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Noto Sans, "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.footer .icons i {
+    font-size: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.footer .icons i:hover {
+    transform: scale(1.2);
+    background-color: white;
+    color: #2C3E50;
+    border: 2px solid #2C3E50;
+}
+
+.copy{
+    background-color: #1A252F;
+}

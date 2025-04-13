@@ -1,0 +1,27 @@
+.line {
+    width: 5rem; 
+    height: 0.2rem;
+}
+button {
+    background-color: #1abc9c;
+    border-radius: 1.875rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #16a085;
+    transform: translateY(-0.125rem);
+}
+
+button:active {
+    transform: translateY(0.0625rem);
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: none; 
+}
+

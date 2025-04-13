@@ -1,0 +1,73 @@
+<!-- Skills section -->
+<section class="Skills">
+    <div class="container">
+
+
+
+        <!--  Skills Section -->
+        <div class="container py-5">
+
+            <h2 class="text-center fw-bold text-info-emphasis">{{titlePage}}</h2>
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <div class="line bg-white me-3 d-flex align-items-center justify-content-center mb-1"></div>
+                <i class="fa-solid fa-star text-white fs-5"></i>
+                <div class="line bg-white ms-3"></div>
+            </div>
+
+            <div class="row">
+
+                @for ( Skill of skills; track Skill.id) {
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class=" card shadow-lg border-light rounded-4 overflow-hidden custom-card py-4">
+                        <img [src]="Skill.img" class="rounded-circle fixed-img mx-auto d-block py-2"
+                            [alt]="Skill.Title">
+                        <div class="card-body text-center">
+                            <h2 class=" h5 card-title text-primary mb-3">{{Skill.Title}}</h2>
+                            <p class="card-text text-muted w-75 m-auto mb-3">{{Skill.des.split(" ",11)+"..."}}</p>
+                            <button (click)="showSkill(Skill)" type="button" class="btn btn-outline-primary mb-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Learn More
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                }
+
+            </div>
+        </div>
+        <!--  Skills Section / -->
+
+        <!-- -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ -->
+
+        <!-- Modals for  skill -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content shadow-lg rounded-3">
+                    <div class="modal-header border-0">
+                        <h1 class="modal-title fs-5 text-primary" id="exampleModalLabel">Skill: {{skillModel.Title}}
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center" inert>
+                        <img [src]="skillModel.img" class="w-50 rounded-circle mb-4">
+                        <h2 class="h5 card-title text-primary mb-3">{{skillModel.Title}}</h2>
+                        <p class="card-text text-muted mb-4">{{skillModel.des}}</p>
+                    </div>
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals for  skill /-->
+
+
+
+    </div>
+
+</section>
+<!-- Home section /-->

@@ -1,0 +1,57 @@
+<!-- portfolio section -->
+<section class="portfolio">
+    <div class="container">
+
+
+
+        <!--  portfolio Section -->
+        <div class=" py-5">
+
+            <h2 class="text-center fw-bold text-info-emphasis text-uppercase">portfolio component</h2>
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <div class="line bg-black me-3 d-flex align-items-center justify-content-center mb-1"></div>
+                <i class="fa-solid fa-star  fs-5"></i>
+                <div class="line bg-black ms-3"></div>
+            </div>
+
+
+            <div class="row">
+                @for ( Image of myImages; track $index) {
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-lg border-light rounded-4 overflow-hidden custom-card">
+                        <div class="image-container position-relative">
+                            <img [src]="Image.img" class="fixed-img w-100" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" (click)="showImage(Image)">
+                            <i
+                                class="text-white fa-solid fa-plus fa-6x position-absolute top-50 start-50 translate-middle  hover-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                }
+
+            </div>
+        </div>
+        <!--  portfolio Section / -->
+
+        <!-- -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ -->
+
+        <!-- Modals for  Image -->
+        <!-- بداية المودال -->
+        <div class="modal bg-IM fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="w-75 modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="text-center">
+                        <img [src]="ImageModel.img" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modals for  Image /-->
+
+
+
+    </div>
+</section>
+<!-- portfolio section /-->

@@ -1,0 +1,48 @@
+<section class="container">
+    <div class="container">
+        <!-- contact section  -->
+        <div class="container py-5">
+
+            <h2 class="text-uppercase text-center mb-3 fs-1 fw-bolder ">{{titalPage}}</h2>
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <div class="line bg-black me-3 d-flex align-items-center justify-content-center mb-1"></div>
+                <i class="fa-solid fa-star  fs-5"></i>
+                <div class="line bg-black ms-3"></div>
+            </div>
+
+            <!-- contact section  / -->
+
+
+            <!-- form section -->
+            <form novalidate="" action="" class="col-sm-12 col-md-8  p-4 mx-auto mt-5 bg-white rounded shadow-lg">
+
+                <!--  field -->
+                @for (contact of contacts; track $index) {
+                <div class="mb-4">
+                    <label [for]="contact.idFor" class="form-label">{{contact.tital}}:</label>
+                    <input #myInput   [id]="contact.idFor" [type]="contact.type" [placeholder]="'Enter your ' + contact.tital"
+                        [name]="contact.idFor" class=" myInput form-control  border-0 border-bottom py-3 position-relative">
+                </div>
+
+                }
+                <div class="mb-4 text-center" [class.d-none]="!ShowMsg">
+                    <label for="" class="form-label text-success fs-4 fw-bold">Sent Successfully</label>
+                    <div class="alert alert-success mt-3" role="alert">
+                        Your message has been sent successfully. Thank you for contacting us!
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <button type="button" class="btn w-100 mt-4 text-white" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" (click)="onSubmit()">
+                    Send Message
+                </button>
+                <!-- Submit button / -->
+
+            </form>
+            <!-- form section / -->
+
+
+        </div>
+    </div>
+</section>

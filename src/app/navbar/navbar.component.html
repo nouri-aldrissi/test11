@@ -1,0 +1,28 @@
+<nav class="navbar position-sticky text-uppercase navbar-expand-md navbar-light fixed-top" [class.shrink]="isScrolled" id="navbar">
+  <div class="container">
+    <a class="navbar-brand text-light logo" routerLink="/Home" routerLinkActive="active" >Start Framework</a>
+
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse  " id="collapsibleNavId">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0 ">
+        <li class="nav-item me-3">
+          <a class="nav-link text-light" routerLink="/Home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-light" routerLink="/About" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-light" routerLink="/Portfolio" routerLinkActive="active">Portfolio</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link text-light" routerLink="/Contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
